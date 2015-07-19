@@ -1418,12 +1418,44 @@ void AddBattlegroundScripts()
 #ifdef SCRIPTS
 /* This is where custom scripts' loading functions should be declared. */
 
+void AddSC_System_Censure();
+void AddSC_NoFarming();
+void AddSC_Boss_Announcer();
+void AddSC_buffcommand();
+void AddSC_playercommands();
+void AddSC_vipcommands();
+void AddSC_Reset();
+void AddSC_LearnSpellsOnLevelUp();
+void AddSC_morphs_npc();
+void AddSC_npc_changer();
+void AddSC_NPC_VisualWeapon();
+void AddSC_Gold_System();
+void AddSC_your_token_item();
+void AddSC_Top5_Killers();
+void AddSC_VIP_NPC();
+
 #endif
 
 void AddCustomScripts()
 {
 #ifdef SCRIPTS
     /* This is where custom scripts should be added. */
+
+AddSC_System_Censure();
+AddSC_NoFarming();
+AddSC_Boss_Announcer();
+AddSC_buffcommand();
+AddSC_playercommands();
+AddSC_vipcommands();
+AddSC_Reset();
+AddSC_LearnSpellsOnLevelUp();
+AddSC_morphs_npc();
+AddSC_npc_changer();
+AddSC_NPC_VisualWeapon();
+AddSC_Gold_System();
+AddSC_your_token_item();
+AddSC_Top5_Killers();
+AddSC_VIP_NPC();
 
 #endif
 }

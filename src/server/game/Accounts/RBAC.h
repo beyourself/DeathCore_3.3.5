@@ -696,6 +696,9 @@ enum RBACPermissions
     RBAC_PERM_COMMAND_MODIFY_XP                              = 798,
 
     // custom permissions 1000+
+    RBAC_PERM_COMMAND_MALL                                   = 1001,
+    RBAC_PERM_COMMAND_BUFF                              	 = 1002,
+    RBAC_PERM_COMMAND_VIP	                                 = 1003,
     RBAC_PERM_MAX
 };
 
