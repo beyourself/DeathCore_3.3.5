@@ -3160,9 +3160,9 @@ void SpellMgr::LoadSpellInfoCorrections()
                 break;
             case 57470: // Renewed Hope (Rank 1)
             case 57472: // Renewed Hope (Rank 2)
-                should also affect Flash Heal
+                // should also affect Flash Heal
                 spellInfo->Effects[EFFECT_0].SpellClassMask[0] |= 0x800;
-               break;
+                break;
             case 51852: // The Eye of Acherus (no spawn in phase 2 in db)
                 spellInfo->Effects[EFFECT_0].MiscValue |= 1;
                 break;
