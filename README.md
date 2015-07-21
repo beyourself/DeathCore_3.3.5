@@ -7,7 +7,7 @@
 `DeathCore_3.3.5a`:[![Build Status](https://travis-ci.org/NoffearrDeathProjecT/DeathCore_3.3.5a.svg?branch=master)](https://travis-ci.org/NoffearrDeathProjecT/DeathCore_3.3.5a)
 
 
-##Informações Gerais do Projeto
+##Informações Gerais do Projeto 
 
 Patch 3.3.5a - NDP-DB 335.11.58 
 
