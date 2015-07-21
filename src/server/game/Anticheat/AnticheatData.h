@@ -1,5 +1,6 @@
 /*
- * Copyright (C) 2013-2015 DeathCore <http://www.noffearrdeathproject.net/>
+ * Copyright (C) 2013-2015 DeathCore <http://www.noffearrdeathproject.net/> 
+ * Copyright (C) 2005-2009 MaNGOS <http://getmangos.com/>
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -61,3 +62,20 @@ public:
     void SetTempReportsTimer(uint32 time, uint8 type);
     uint32 GetTempReportsTimer(uint8 type);
 
+    void SetDailyReportState(bool b);
+    bool GetDailyReportState();
+private:
+    uint32 lastOpcode;
+    MovementInfo lastMovementInfo;
+    //bool disableACCheck;
+    //uint32 disableACCheckTimer;
+    uint32 totalReports;
+    uint32 typeReports[MAX_REPORT_TYPES];
+    float average;
+    uint32 creationTime;
+    uint32 tempReports[MAX_REPORT_TYPES];
+    uint32 tempReportsTimer[MAX_REPORT_TYPES];
+    bool hasDailyReport;
+};
+
+#endif

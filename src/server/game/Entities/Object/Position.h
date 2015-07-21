@@ -50,7 +50,7 @@ struct Position
     float m_positionX;
     float m_positionY;
     float m_positionZ;
-    // Better to limit access to _orientation field, to guarantee the value is normalized
+	// Better to limit access to _orientation field, to guarantee the value is normalized
 private:
     float m_orientation;
 

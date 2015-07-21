@@ -30,12 +30,12 @@ public:
     {
         static ChatCommand anticheatCommandTable[] =
         {
-            { "geral",         SEC_GAMEMASTER,     true,  &HandleAntiCheatGlobalCommand,         "", NULL },
-            { "info",         SEC_GAMEMASTER,     true,  &HandleAntiCheatPlayerCommand,         "", NULL },
-            { "deletar",         SEC_ADMINISTRATOR,  true,  &HandleAntiCheatDeleteCommand,         "", NULL },
+            { "geral",         SEC_ADMINISTRATOR,     true,  &HandleAntiCheatGlobalCommand,         "", NULL },
+            { "info",         SEC_ADMINISTRATOR,     true,  &HandleAntiCheatPlayerCommand,         "", NULL },
+            //{ "deletar",         SEC_ADMINISTRATOR,  true,  &HandleAntiCheatDeleteCommand,         "", NULL },
             { "ativar",         SEC_ADMINISTRATOR,  true,  &HandleAntiCheatHandleCommand,         "", NULL },
-            { "prender",         SEC_GAMEMASTER,     true,  &HandleAnticheatJailCommand,         "", NULL },
-            { "aviso",           SEC_GAMEMASTER,     true,  &HandleAnticheatWarnCommand,         "", NULL },
+            { "prender",         SEC_ADMINISTRATOR,     true,  &HandleAnticheatJailCommand,         "", NULL },
+            { "aviso",           SEC_ADMINISTRATOR,     true,  &HandleAnticheatWarnCommand,         "", NULL },
             { NULL,             0,                     false, NULL,                                           "", NULL }
         };
 
@@ -130,7 +130,7 @@ public:
         loc.m_positionX = 16226.5f;
         loc.m_positionY = 16403.6f;
         loc.m_positionZ = -64.5f;
-        loc.m_orientation = 3.2f;
+		float m_orientation = 3.2f;
 
         pTarget->SetHomebind(loc,876);
         return true;
@@ -231,12 +231,12 @@ public:
 
         strCommand = command;
 
-        if (strCommand.compare("on") == 0)
+        if (strCommand.compare("on-sim") == 0)
         {
             sWorld->setBoolConfig(CONFIG_ANTICHEAT_ENABLE,true);
             handler->SendSysMessage("O Sistema Anti Hacker esta: Ativado!");
         }
-        else if (strCommand.compare("off") == 0)
+        else if (strCommand.compare("off-naum") == 0)
         {
             sWorld->setBoolConfig(CONFIG_ANTICHEAT_ENABLE,false);
             handler->SendSysMessage("O Sistema Anti Hacker esta: Desativado!");
@@ -249,7 +249,7 @@ public:
     {
         if (!sWorld->getBoolConfig(CONFIG_ANTICHEAT_ENABLE))
         {
-            handler->PSendSysMessage("O Sistema Anti Hacker esta desativado!");
+            handler->PSendSysMessage("O Sistema Anti Hacker esta: Desativado!");
             return true;
         }
 
@@ -260,3 +260,6 @@ public:
 };
 
 void AddSC_anticheat_commandscript()
+{
+    new anticheat_commandscript();
+}

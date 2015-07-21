@@ -1,5 +1,6 @@
 /*
- * Copyright (C) 2013-2015 DeathCore <http://www.noffearrdeathproject.net/>
+ * Copyright (C) 2013-2015 DeathCore <http://www.noffearrdeathproject.net/> 
+ * Copyright (C) 2005-2009 MaNGOS <http://getmangos.com/>
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -432,3 +433,5 @@ void AnticheatMgr::AnticheatDeleteCommand(uint32 guid)
 void AnticheatMgr::ResetDailyReportStates()
 {
      for (AnticheatPlayersDataMap::iterator it = m_Players.begin(); it != m_Players.end(); ++it)
+         m_Players[(*it).first].SetDailyReportState(false);
+}

@@ -1,5 +1,6 @@
 /*
- * Copyright (C) 2013-2015 DeathCore <http://www.noffearrdeathproject.net/>
+ * Copyright (C) 2013-2015 DeathCore <http://www.noffearrdeathproject.net/> 
+ * Copyright (C) 2005-2009 MaNGOS <http://getmangos.com/>
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -56,7 +57,7 @@ void AnticheatData::SetPosition(float x, float y, float z, float o)
     lastMovementInfo.pos.m_positionX = x;
     lastMovementInfo.pos.m_positionY = y;
     lastMovementInfo.pos.m_positionZ = z;
-    lastMovementInfo.pos.m_orientation = o;
+    float m_orientation = o;
 }
 
 uint32 AnticheatData::GetLastOpcode() const
@@ -116,3 +117,20 @@ void AnticheatData::SetCreationTime(uint32 _creationTime)
 
 void AnticheatData::SetTempReports(uint32 amount, uint8 type)
 {
+    tempReports[type] = amount;
+}
+
+uint32 AnticheatData::GetTempReports(uint8 type)
+{
+    return tempReports[type];
+}
+
+void AnticheatData::SetTempReportsTimer(uint32 time, uint8 type)
+{
+    tempReportsTimer[type] = time;
+}
+
+uint32 AnticheatData::GetTempReportsTimer(uint8 type)
+{
+    return tempReportsTimer[type];
+}
