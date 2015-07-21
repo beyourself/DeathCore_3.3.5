@@ -21,7 +21,7 @@ Patch 3.3.5a - NDP-DB 335.11.58
 Esta é a nova source da DeathCore que estamos atualizando devagar, adicionando novos scripts e novidades, e se você quiser nos ajudar neste projeto, ficaremos gratos! Toda a ajuda será bem vinda! Atenciosamente, Equipe Noffearr Death ProjecT™.
 
 
-##Arquivos Necessários
+##Arquivos Necessários 
 
 [dbc](#)
 
