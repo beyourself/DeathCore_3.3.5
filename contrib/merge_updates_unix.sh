@@ -1,1 +1,1 @@
-cat ../sql/updates/world/*.sql > world_update.sql
+cat ../sql/updates/world/*.sql > world_update.sql 
