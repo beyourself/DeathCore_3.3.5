@@ -6,7 +6,7 @@
 
 ##Informações Gerais do Projeto 
 
-Patch 3.3.5a - NDP-DB 335.11.58 
+Patch 3.3.5a - NDP-DB 335.11.59 
 
 - Level 80
 - Correções Diárias
