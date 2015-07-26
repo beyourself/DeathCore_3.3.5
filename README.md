@@ -1,4 +1,4 @@
-## ![logo](http://i.imgur.com/3XzR93r.png)
+## ![logo](http://i.imgur.com/070CIao.png)
 
 
 # DeathCore 3.3.5a - New Source - Scripts 
